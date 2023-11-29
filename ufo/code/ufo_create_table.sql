@@ -1,3 +1,8 @@
+/*
+Name: ufo_creat_table
+Description: import raw ufo dataset to SQL server to make further clean and transformation
+Skills used: Create table and use BULK INSERT to import data
+*/
 DROP table if exists ufo;
 CREATE table ufo
 (
@@ -6,13 +11,11 @@ CREATE table ufo
 )
 ;
 
-SELECT *
-FROM ufo
 -- change localpath to the directory where you saved the ufo .csv files
 
 BULK 
 INSERT ufo
-FROM  'C:\Users\Admin\Downloads\Data Analysis\sql_book-master\Chapter 5_ Text Analysis\ufo1.csv'
+FROM  'D:\Claura Nguyen\Data Analyst\project\tidy_data\ufo\raw\ufo1.csv'
 WITH(CODEPAGE = '65001'
 	,FIRSTROW = 2
 	,FORMAT = 'csv'
@@ -25,7 +28,7 @@ WITH(CODEPAGE = '65001'
 
 BULK 
 INSERT ufo
-FROM  'C:\Users\Admin\Downloads\Data Analysis\sql_book-master\Chapter 5_ Text Analysis\ufo2.csv'
+FROM  'D:\Claura Nguyen\Data Analyst\project\tidy_data\ufo\raw\ufo2.csv'
 WITH(CODEPAGE = '65001'
 	,FIRSTROW = 2
 	,FORMAT = 'csv'
@@ -37,7 +40,7 @@ WITH(CODEPAGE = '65001'
 )
 BULK 
 INSERT ufo
-FROM  'C:\Users\Admin\Downloads\Data Analysis\sql_book-master\Chapter 5_ Text Analysis\ufo3.csv'
+FROM  'D:\Claura Nguyen\Data Analyst\project\tidy_data\ufo\raw\ufo3.csv'
 WITH(CODEPAGE = '65001'
 	,FIRSTROW = 2
 	,FORMAT = 'csv'
@@ -49,7 +52,7 @@ WITH(CODEPAGE = '65001'
 )
 BULK 
 INSERT ufo
-FROM  'C:\Users\Admin\Downloads\Data Analysis\sql_book-master\Chapter 5_ Text Analysis\ufo4.csv'
+FROM  'D:\Claura Nguyen\Data Analyst\project\tidy_data\ufo\raw\ufo4.csv'
 WITH(CODEPAGE = '65001'
 	,FIRSTROW = 2
 	,FORMAT = 'csv'
@@ -61,7 +64,7 @@ WITH(CODEPAGE = '65001'
 )
 BULK 
 INSERT ufo
-FROM  'C:\Users\Admin\Downloads\Data Analysis\sql_book-master\Chapter 5_ Text Analysis\ufo5.csv'
+FROM  'D:\Claura Nguyen\Data Analyst\project\tidy_data\ufo\raw\ufo5.csv'
 WITH(CODEPAGE = '65001'
 	,FIRSTROW = 2
 	,FORMAT = 'csv'
